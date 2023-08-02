@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flexing">
+      <div class="images">
+        <img
+          src="bg-main-desktop.png"
+          alt="bg-main-desktop"
+          class="bg-main-desktop"
+        />
+        <img
+          src="bg-card-front.png"
+          alt="bg-card-front"
+          class="bg-card-front"
+        />
+        <img src="bg-card-back.png" alt="bg-card-back" class="bg-card-back" />
+      </div>
+
+      <img class="logo" src="card-logo.svg" alt="card-logo" />
+
+      <section class="second-ATM-values">
+        <div class="front">
+          <p id="cardNumber2" class="sideAtm"></p>
+          <p id="cardHolderName2" class="sideAtm"></p>
+          <p id="dateMonth" class="sideAtm"></p>
+          <p class="divider">/</p>
+          <p id="dateYear" class="sideAtm"></p>
+        </div>
+        <p id="CVC1" class="sideAtm"></p>
+      </section>
+
+      <section class="first-ATM-values" id="form">
+        <form action="index.html">
+          <div class="Name flex">
+            <label for="CardholderName">CARDHOLDER NAME <br /></label>
+            <input
+              type="text"
+              name="cardholderName"
+              id="cardHolderName1"
+              placeholder="e.g Jane Appleseed"
+              maxlength="30"
+            /><br /><br />
+          </div>
+          <p id="errormsgName" class="errormsg"></p>
+
+          <div class="number flex">
+            <label for="cardNumber"> CARD NUMBER <br /></label>
+            <input
+              type="text"
+              name="cardNumber"
+              id="cardNumber1"
+              placeholder="e.g 1234 5678 9123 0000"
+              maxlength="19"
+            /><br /><br />
+          </div>
+          <p id="errormsgNum" class="errormsg"></p>
+
+          <div class="others flex">
+            <label for="EXP_DATE">
+              EXP.DATE(MM/YY) <span class="cvc_span">CVC</span><br
+            /></label>
+            <input
+              type="text"
+              name="month"
+              class="three"
+              id="month"
+              placeholder="MM"
+              oninput=""
+              maxlength="2"
+            />
+            <input
+              type="text"
+              name="date"
+              class="three"
+              id="year"
+              placeholder="YY"
+              oninput=""
+              maxlength="2"
+            />
+            <input
+              type="text"
+              name="CVC"
+              class="three"
+              id="CVC"
+              placeholder="000"
+              oninput=""
+              maxlength="3"
+            />
+            <br /><br />
+          </div>
+          <p id="errormsgCvc" class="errormsg"></p>
+
+          <button type="submit" id="button">Confirm</button>
+        </form>
+      </section>
+
+      <section id="thank-you-message" class="hidden thankyou">
+        <img src="icon-complete.svg" alt="Complete icon" />
+        <h2 id="thank-you-header">Thank You</h2>
+        <p>We've added your card details</p>
+        <button type="submit" id="continue">Continue</button>
+      </section>
+    </div>
+
+    <footer>
+      <p>Challenge by: Frontend Mentors Codede By: Aka-Okoye Chibuzo</p>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>
